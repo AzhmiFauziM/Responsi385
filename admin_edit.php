@@ -46,8 +46,8 @@ $data = json_decode($data, TRUE);
                 <input type="text" name="nama" class="input_form" value="<?= $data["nama"] ?>" placeholder="Nama Lengkap" required>
                 <label>Jenis Kelamin</label>
                 <select name="jenis_kelamin" class="input_form" required>
-                    <option value="Laki-laki">Laki-laki</option>
-                    <option value="Perempuan">Perempuan</option>
+                    <option value="Laki-laki" <?= ($data["jenis_kelamin"]=="Laki-laki") ? 'selected' : '' ?>>Laki-laki</option>
+                    <option value="Perempuan" <?= ($data["jenis_kelamin"]=="Perempuan") ? 'selected' : '' ?>>Perempuan</option>
                 </select>
                 <label>Nomor Induk Kependudukan (NIK)</label>
                 <input type="number" name="nik" class="input_form" value="<?= $data["nik"] ?>" placeholder="Nomor Induk Kependudukan" required>
@@ -57,19 +57,19 @@ $data = json_decode($data, TRUE);
                 <input type="number" name="no_hp" class="input_form" value="<?= $data["nomor"] ?>" placeholder="Nomor HP" required>
                 <label>Jenis Vaksin</label>
                 <select name="jenis_vaksin" class="input_form" required>
-                    <option value="Sinovac">Sinovac</option>
-                    <option value="AstraZeneca">AstraZeneca</option>
-                    <option value="Sinopharm">Sinopharm</option>
-                    <option value="Moderna">Moderna</option>
-                    <option value="Pfizer">Pfizer</option>
-                    <option value="Sputnik V">Sputnik V</option>
-                    <option value="Janssen">Janssen</option>
-                    <option value="Convidecia">Convidecia</option>
+                    <option value="Sinovac" <?= ($data["jenis_vaksin"]=="Sinovac") ? 'selected' : '' ?>>Sinovac</option>
+                    <option value="AstraZeneca" <?= ($data["jenis_vaksin"]=="AstraZeneca") ? 'selected' : '' ?>>AstraZeneca</option>
+                    <option value="Sinopharm" <?= ($data["jenis_vaksin"]=="Sinopharm") ? 'selected' : '' ?>>Sinopharm</option>
+                    <option value="Moderna" <?= ($data["jenis_vaksin"]=="Moderna") ? 'selected' : '' ?>>Moderna</option>
+                    <option value="Pfizer" <?= ($data["jenis_vaksin"]=="Pfizer") ? 'selected' : '' ?>>Pfizer</option>
+                    <option value="Sputnik V" <?= ($data["jenis_vaksin"]=="Sputnik V") ? 'selected' : '' ?>>Sputnik V</option>
+                    <option value="Janssen" <?= ($data["jenis_vaksin"]=="Janssen") ? 'selected' : '' ?>>Janssen</option>
+                    <option value="Convidecia" <?= ($data["jenis_vaksin"]=="Convidecia") ? 'selected' : '' ?>>Convidecia</option>
                 </select>
                 <label>Dosis</label>
                 <select name="dosis" class="input_form" required>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
+                    <option value="1" <?= ($data["dosis"]== 1) ? 'selected' : '' ?>>1</option>
+                    <option value="2" <?= ($data["dosis"]== 2) ? 'selected' : '' ?>>2</option>
                 </select>
                 <label>Tanggal Vaksin</label>
                 <input type="date" name="tanggal" class="input_form" value="<?= $data["tanggal"] ?>" placeholder="Tanggal" required>
