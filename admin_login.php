@@ -48,7 +48,6 @@ if (isset($_POST['submit'])) {
 			<input type="submit" name="submit" class="tombol_LR" value="LOGIN">
 			<br><br>
 			<center>
-				<b>Anda belum punya akun? </b><a href="register.php">Register</a>
 				<a href="user_login.php">Masuk sebagai user</a>
 			</center>
 		</form>
